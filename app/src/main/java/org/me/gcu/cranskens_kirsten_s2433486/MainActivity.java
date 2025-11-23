@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         currencyListView.setAdapter(adapter);
 
 
-        // 6) Keep your click behaviour
+        // 6) Keep click behaviour
         currencyListView.setOnItemClickListener(
                 new android.widget.AdapterView.OnItemClickListener() {
                     @Override
@@ -323,7 +323,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     );
                 } else {
                     Log.e("MyTask", "No cached data available, cannot update list");
-                    // Optional: toast to explain
                     currencyListView.post(() ->
                             android.widget.Toast.makeText(
                                     MainActivity.this,
@@ -331,7 +330,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                                     android.widget.Toast.LENGTH_LONG
                             ).show()
                     );
-                    return; // nothing more we can do
+                    return;
                 }
             } else {
                 // 🔹 Network was OK – save fresh XML to cache
@@ -535,7 +534,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             return;
         }
 
-        // This is the SAME Intent logic as in your ListView click listener
+        // This is the SAME Intent logic as  ListView click listener
         android.content.Intent intent =
                 new android.content.Intent(MainActivity.this, CurrencyDetailActivity.class);
 
@@ -593,7 +592,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         CurrencyAdapter adapter = new CurrencyAdapter(MainActivity.this, filteredList);
         currencyListView.setAdapter(adapter);
-        // IMPORTANT: click should use parent.getItemAtPosition (see next section)
+        // IMPORTANT: click should use parent.getItemAtPosition
         setSafeItemClickListener();
     }
 

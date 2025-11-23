@@ -23,7 +23,7 @@ public class CurrencyDetailActivity extends AppCompatActivity implements View.On
     private TextView resultText;
     private View detailMainView;
 
-    private float rate = 0.0f;   // we’ll get this from the Intent
+    private float rate = 0.0f;
 
     // 🔹 NEW: store the currency code so all methods can use it
     private String currencyCode = "???";
