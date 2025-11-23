@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="0dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/detailMainView"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="start"
+            android:text="⬅ Back"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/SteelBlue"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/flagImage"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Country Flag"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+
+        <!-- Title: currency pair -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/DarkSlateGray"
+            android:paddingBottom="4dp"
+            android:text="" />
+
+        <!-- Rate -->
+        <TextView
+            android:id="@+id/rateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/DimGray"
+            android:paddingBottom="2dp"
+            android:text="Rate here" />
+
+        <!-- Last updated date -->
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/DimGray"
+            android:paddingBottom="16dp"
+            android:text="Last updated here" />
+
+        <!-- Input label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/DimGray"
+            android:text="Enter amount in GBP:" />
+
+        <!-- Amount entry -->
+        <EditText
+            android:id="@+id/gbpInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:inputType="numberDecimal"
+            android:hint="e.g. 100" />
+
+        <!-- Button: GBP to currency -->
+        <Button
+            android:id="@+id/gbpToCurrButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="GBP → Currency"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:backgroundTint="@color/SteelBlue"
+            android:textColor="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+        <!-- Button: currency to GBP -->
+        <Button
+            android:id="@+id/currToGbpButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:text="Currency → GBP"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:backgroundTint="@color/SteelBlue"
+            android:textColor="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+        <!-- Conversion result -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/DarkSlateGray"
+            android:paddingTop="12dp"
+            android:text="" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+

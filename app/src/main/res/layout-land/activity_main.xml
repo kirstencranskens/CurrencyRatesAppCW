@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- LEFT SIDE: header + controls, now scrollable -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/salutation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/DarkSlateGray"
+                android:paddingBottom="8dp"
+                android:text="Welcome to Exchange App" />
+
+            <!-- Load data button -->
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:text="Refresh rates"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="@color/SteelBlue"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+
+            <!-- Info text -->
+            <TextView
+                android:id="@+id/acknowledgement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/DimGray"
+                android:paddingBottom="4dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/rawDataDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/DimGray"
+                android:paddingBottom="12dp"
+                android:text="" />
+
+            <!-- Main currencies header -->
+            <TextView
+                android:id="@+id/mainHeaderText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/DarkSlateGray"
+                android:paddingBottom="4dp"
+                android:text="Main currencies:" />
+
+            <!-- Main currency buttons -->
+            <Button
+                android:id="@+id/usdButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text=""
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:backgroundTint="@color/SteelBlue"
+                android:textColor="@android:color/white"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <Button
+                android:id="@+id/eurButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text=""
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:backgroundTint="@color/SteelBlue"
+                android:textColor="@android:color/white"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <Button
+                android:id="@+id/jpyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text=""
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:backgroundTint="@color/SteelBlue"
+                android:textColor="@android:color/white"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <Button
+                android:id="@+id/audButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text=""
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:backgroundTint="@color/SteelBlue"
+                android:textColor="@android:color/white"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <!-- Search controls -->
+            <TextView
+                android:id="@+id/searchLabelText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search by currency name, code or country:"
+                android:textSize="14sp"
+                android:textColor="@color/DimGray"
+                android:paddingTop="4dp"
+                android:paddingBottom="2dp" />
+
+            <EditText
+                android:id="@+id/searchInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:hint="e.g. USD, Dollar, Euro, Japan" />
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:text="Search"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:backgroundTint="@color/SteelBlue"
+                android:textColor="@android:color/white"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- RIGHT SIDE: list -->
+    <ListView
+        android:id="@+id/currencyListView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp" />
+
+</LinearLayout>

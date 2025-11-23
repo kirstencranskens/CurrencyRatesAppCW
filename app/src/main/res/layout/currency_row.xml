@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Narrow colour bar showing strength -->
+    <View
+        android:id="@+id/strengthBar"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/LightGrey" />
+
+    <!-- Text content -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <!-- Top line: currency title -->
+        <TextView
+            android:id="@+id/rowTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/DarkSlateGray" />
+
+        <!-- Second line: rate -->
+        <TextView
+            android:id="@+id/rowRateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/DimGray" />
+
+    </LinearLayout>
+
+</LinearLayout>
